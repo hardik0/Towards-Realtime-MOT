@@ -42,7 +42,8 @@ def test(
     else:  # darknet format
         load_darknet_weights(model, weights)
 
-    model = torch.nn.DataParallel(model)
+    #model = torch.nn.DataParallel(model)
+    model = torch.nn.parallel.DistributedDataParallel(model, find_unused_parameters=True)
     model.cuda().eval()
 
     # Get dataloader
@@ -173,7 +174,8 @@ def test_emb(
     else:  # darknet format
         load_darknet_weights(model, weights)
 
-    model = torch.nn.DataParallel(model)
+    #model = torch.nn.DataParallel(model)
+    model = torch.nn.parallel.DistributedDataParallel(model, find_unused_parameters=True)
     model.cuda().eval()
 
     # Get dataloader
