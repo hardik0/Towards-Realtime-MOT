@@ -1,0 +1,15 @@
+{
+    "root":"/content/Towards-Realtime-MOT/data/MOT",
+    "train":
+    {
+        "detrac":"./data/detrac.train"
+    },
+    "test_emb":
+    {
+        "detrac":"./data/detrac.train"
+    },
+    "test":
+    {
+        "detrac":"./data/detrac.train"
+    }
+}
